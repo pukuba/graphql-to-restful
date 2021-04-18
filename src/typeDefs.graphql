@@ -9,13 +9,12 @@ type Query{
 
 type Mutation{
     insertUser(
-        name: String!,
-        time: DateTime!
+        name: String!
     ): User!
 }
 
 type User{
     name: String!
-    time: DateTime!
+    date: DateTime!
     id: ObjectID!
 }
