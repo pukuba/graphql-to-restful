@@ -1,3 +1,21 @@
+scalar DateTime
+scalar ObjectID
+
 type Query{
     test: String!
+    users: [User!]!
+    searchUser(name: String!): [User!]!
+}
+
+type Mutation{
+    insertUser(
+        name: String!,
+        time: DateTime!
+    ): User!
+}
+
+type User{
+    name: String!
+    time: DateTime!
+    id: ObjectID!
 }
